@@ -61,7 +61,6 @@ jobs:
       # https://docs.docker.com/engine/reference/commandline/image_build/
       # https://docs.docker.com/engine/reference/commandline/push/
       run: |
-        cd vote
         docker image build \
           --build-arg VERSION=${{ env.SHORT_SHA }} \
           --tag ${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ env.SHORT_SHA }} \
